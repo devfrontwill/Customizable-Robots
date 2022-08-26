@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
 </head>
+
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="img/robotron.png" alt="Robotron">
+            <img class="robo" src="img/robotron.png" alt="Robotron" id="robotron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
         </section>
 
@@ -52,9 +53,9 @@
                     <div class="peca">
                         <label for="" class="peca-titulo">Braços</label>
                         <div class="controle">
-                            <buttom class="controle-ajuste">-</buttom>
-                            <input type="text" class="controle-contador" value="00">
-                            <buttom class="controle-ajuste">+</buttom>
+                            <buttom class="controle-ajuste" id="subtrair">-</buttom>
+                            <input type="text" class="controle-contador" value="00" id="braco">
+                            <buttom class="controle-ajuste" id="somar">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
@@ -98,5 +99,6 @@
             </form>
         </section>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 </html>
