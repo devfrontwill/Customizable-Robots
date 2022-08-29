@@ -58,3 +58,7 @@ function atualizaEstatistica(peca) {
     })
 }
 
+function trocaImagem(cor){
+   document.querySelector(".robo").src="./img/Medabot - " + cor + ".png";
+}
+

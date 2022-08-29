@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
-    <title>Robotron 2000</title>
+    <link rel="shortcut icon" type="image/jpg" href="./img/faviconn.ico"/>
+    <title>Medabots 2000</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,9 @@
 </head>
 <body>
     <main>
-        <section class="robotron">
-            <img class="robo" src="img/robotron.png" alt="Robotron">
-            <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+        <section class="robotron">            
+            <img class="robo" src="./img/Medabot - Amarelo.png" alt="Medabots">
+            <figcaption class="titulo">MEDABOTS</figcaption>
         </section>
 
         <section class="box estatisticas">
@@ -93,9 +93,20 @@
                             <buttom class="controle-ajuste" data-controle="+" data-peca="foguetes">+</buttom>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <input type="submit" value="Iniciar produção" class="producao" id="producao">
             </form>
+
+         <section class="botoes">
+            <button class="alterar amarelo" alterar onclick="trocaImagem('Amarelo')">Medabot Amarelo</button>       
+            <button class="alterar azul" alterar onclick="trocaImagem('Azul')">Medabot Azul</button>      
+            <button class="alterar roxo" alterar onclick="trocaImagem('Roxo')">Medabot Roxo</button>   
+            <button class="alterar vermelho" alterar onclick="trocaImagem('Vermelho')">Medabot Vermelho</button>                
+         </section>
+            
+            
+            
+        </section>    
         </section>
     </main>
     <script src="./js/main.js"></script>
