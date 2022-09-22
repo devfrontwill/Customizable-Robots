@@ -37,28 +37,33 @@ const pecas = {
 
 controle.forEach( (elemento) => {
     elemento.addEventListener('click', (evento) => {
-        manipulaDados(evento.target.textContent, evento.target.parentNode)
-        atualizaEstatistica(evento.target.dataset.peca)
+        manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
+        atualizaEstatistica(evento.target.dataset.peca, evento.target.dataset.controle);
     })
 })
-
-function manipulaDados(operacao, controle) {
-    const peca = controle.querySelector("[data-contador]")
-
-    if(operacao === "-") {
-        peca.value = parseInt(peca.value) - 1
-    } else {
-        peca.value = parseInt(peca.value) + 1
+  
+  function manipulaDados(operacao, controle) {
+    const peca = controle.querySelector("[data-contador]");
+  
+    if(operacao == "-") {
+        peca.value = parseInt(peca.value) - 1;
+    } else if(operacao == "+") {
+        peca.value = parseInt(peca.value) + 1;
     }
-}
-
-function atualizaEstatistica(peca) {
-    estatistica.forEach( (elemento ) => {
-        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
-    })
-}
+  }
+  
+  function atualizaEstatistica(peca, operacao) {
+    if(operacao === "+") {
+      estatistica.forEach( (elemento) => {
+        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
+      })
+    } else {
+      estatistica.forEach( (elemento) => {
+        elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica];
+      })
+    }
+  }
 
 function trocaImagem(cor){
    document.querySelector(".robo").src="./img/Medabot - " + cor + ".png";
 }
-
